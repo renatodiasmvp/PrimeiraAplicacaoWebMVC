@@ -1,0 +1,58 @@
+@model PrimeiraAplicacaoMVC.Models.Comodo;
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="text-center mt-3">
+
+        <h1>Calculadora de Pintura</h1>
+
+        <p>Calcule o quanto será necessário para a sua pintura.</p>
+
+    </div>
+
+
+
+    <div class="container mt-2">
+
+        <h3>Informe os dados do cômodo:</h3>
+
+        <form class="form-inline p-4" asp-action="Index">
+
+            
+                <div class="form-group col-sm-4">
+                    <label class="col-sm-3 col-form-label" for="largura">Largura</label>
+                    <div class="col-sm-1">
+                        <input type="text" id="largura" asp-for="Largura" class="form-control" required="required">
+                    </div>
+                </div>
+                
+                <div class="form-group col-sm-4">
+                    <label  class="col-sm-3 col-form-label"  for="altura">Altura</label>
+                    <div class="col-sm-1">
+                        <input type="text" id="altura" asp-for="Altura" class="form-control" required="required">
+                    </div>
+                </div>
+
+                <div class="form-group col-sm-4">
+                    <label class="col-sm-3 col-form-label" for="profundidade">Profundidade</label>
+                    <div class="col-sm-1">
+                        <input type="text" id="profundidade" asp-for="Profundidade" class="form-control" required="required">
+                    </div>
+                </div>
+
+                <div class="form-group col-sm-12 p-4">
+                    <button type="submit" class="btn btn-primary">Calcular</button>
+                </div>
+            
+
+        </form>
+
+        <p>*Todas as medidas devem ser informadas em metro(m).</p>
+
+    </div>
+
+
+
+

@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Calculadora de Pintura</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
+              crossorigin="anonymous"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"/>
+    </environment>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3" style="background-color:#f4f5f6">
+            <div class="container">
+                <div class="image" style="max-width:150px; height:auto; padding:10px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="logo-devmedia" viewBox="0 0 584.52 132.87" shape-rendering="geometricPrecision "><defs><style>.cls-1{fill:#7bac3b;}.cls-2{fill:#484848;}</style></defs><title>DevMedia - Plataforma para Programadores</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><g id="_Group_" data-name="&lt;Group&gt;"><path class="cls-1" id="_Path_" d="M 39.7 61.42 L 94.78 6.34 A 66.45 66.45 0 0 0 9.87 31.59 Z" data-name="&lt;Path&gt;" /><path class="cls-1" id="_Path_2" d="M 71.3 39.7 l 55.18 55.18 A 66.47 66.47 0 0 0 101.19 9.81 Z" data-name="&lt;Path&gt;" /><path class="cls-1" id="_Path_3" d="M 93 71.31 L 37.89 126.44 A 66.47 66.47 0 0 0 123 101.28 Z" data-name="&lt;Path&gt;" /><path class="cls-1" id="_Path_4" d="M 61.42 93 l -55 -55 a 66.46 66.46 0 0 0 25.11 85 Z" data-name="&lt;Path&gt;" /></g><path class="cls-2" d="M 168.68 95.88 V 38.41 h 20.88 a 31.2 31.2 0 0 1 12.34 2.27 a 24.82 24.82 0 0 1 14.21 15.26 a 34.27 34.27 0 0 1 1.78 11.13 a 33.65 33.65 0 0 1 -2 11.86 A 25.34 25.34 0 0 1 210.2 88 a 25.7 25.7 0 0 1 -8.94 5.83 a 31.58 31.58 0 0 1 -11.7 2.06 Z m 38 -28.82 a 24.48 24.48 0 0 0 -1.13 -7.61 a 17 17 0 0 0 -3.32 -6 a 14.78 14.78 0 0 0 -5.38 -3.89 a 18.18 18.18 0 0 0 -7.25 -1.38 h -9.71 V 86.08 h 9.71 a 17.5 17.5 0 0 0 7.33 -1.46 a 15 15 0 0 0 5.34 -4 a 17.87 17.87 0 0 0 3.28 -6 A 24.19 24.19 0 0 0 206.64 67.06 Z" /><path class="cls-2" d="M 270.19 86.08 v 9.79 H 226.72 V 38.41 h 43.47 V 48.2 h -32.3 V 62 h 32.3 v 9.07 h -32.3 v 15 Z" /><path class="cls-2" d="M 390.26 95.88 V 46.18 l -22 33.77 l -22 -33.77 v 49.7 h -4.13 V 38.41 h 4.13 l 22 34.12 l 22 -34.12 h 4.13 V 95.88 Z" /><path class="cls-2" d="M 448.19 92.15 v 3.72 H 408 V 38.41 h 39.47 v 3.72 H 412.12 V 64.71 h 36.07 v 3.56 H 412.12 V 92.15 Z" /><path class="cls-2" d="M 459.23 95.88 V 38.41 h 21.22 a 29.36 29.36 0 0 1 11.94 2.27 a 24 24 0 0 1 8.54 6.15 a 25.77 25.77 0 0 1 5.1 9.11 a 35.75 35.75 0 0 1 1.7 11.13 a 34.94 34.94 0 0 1 -1.9 11.86 A 25.58 25.58 0 0 1 500.36 88 a 24.4 24.4 0 0 1 -8.62 5.83 a 29.64 29.64 0 0 1 -11.29 2.06 Z M 503.6 67.06 a 31.22 31.22 0 0 0 -1.54 -10 a 22.51 22.51 0 0 0 -4.49 -7.89 A 20.49 20.49 0 0 0 490.32 44 a 24.61 24.61 0 0 0 -9.87 -1.86 H 463.36 v 50 h 17.09 a 24.65 24.65 0 0 0 10 -1.9 a 19.94 19.94 0 0 0 7.24 -5.3 a 23.18 23.18 0 0 0 4.41 -8 A 31.72 31.72 0 0 0 503.6 67.06 Z" /><path class="cls-2" d="M 518.32 95.88 V 38.41 h 4.13 V 95.88 Z" /><path class="cls-2" d="M 555.84 38.41 h 3.67 l 25 57.47 H 580 l -6 -13.82 l -32.8 0.15 l -6 13.67 h -4.59 Z m 16.71 39.67 L 557.67 43.43 L 542.44 78.24 Z" /><polygon class="cls-2" points="322.35,38.41 304.73,82.9 304.69,82.78 304.64,82.9 287.02,38.41 275.85,38.41 298.27,95.88 304.69,95.88 311.1,95.88 333.52,38.41 322.35,38.41" /></g></g></svg>
+                </div>
+                
+                <a class="navbar-brand" asp-area="" asp-controller="CalculadoraPintura" asp-action="Index"> 
+                  
+  Calculadora de Pintura</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <partial name="_CookieConsentPartial" />
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2019 - Calculadora de Pintura
+        </div>
+    </footer>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
+        </script>
+    </environment>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
